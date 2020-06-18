@@ -1,5 +1,2 @@
-QFile qssfile(":/style/style.qss");
-qssfile.open(QFile::ReadOnly);
-QString qss;
-qss = qssfile.readAll();
-this->setStyleSheet(qss);
+Linux ubuntu-16.04 complied, not all ok ,just little functions.
+
