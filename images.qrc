@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/">
+        <file>images/checkbox.png</file>
+        <file>images/checkbox_g.png</file>
+        <file>images/calculator.ico</file>
+    </qresource>
+</RCC>

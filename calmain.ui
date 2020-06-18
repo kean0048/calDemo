@@ -1,0 +1,2369 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>calMain</class>
+ <widget class="QMainWindow" name="calMain">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>654</width>
+    <height>708</height>
+   </rect>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>7000</width>
+    <height>8460</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Calculate</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>images/calculator.ico</normaloff>images/calculator.ico</iconset>
+  </property>
+  <property name="toolTip">
+   <string/>
+  </property>
+  <property name="statusTip">
+   <string/>
+  </property>
+  <property name="tabShape">
+   <enum>QTabWidget::Triangular</enum>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="1" column="0">
+     <layout class="QVBoxLayout" name="total">
+      <item>
+       <layout class="QVBoxLayout" name="show">
+        <item>
+         <widget class="QTextEdit" name="textEdit_Result">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>80</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>100</height>
+           </size>
+          </property>
+          <property name="layoutDirection">
+           <enum>Qt::RightToLeft</enum>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: 15pt &quot;Ubuntu&quot;;</string>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::Box</enum>
+          </property>
+          <property name="lineWidth">
+           <number>3</number>
+          </property>
+          <property name="midLineWidth">
+           <number>2</number>
+          </property>
+          <property name="verticalScrollBarPolicy">
+           <enum>Qt::ScrollBarAsNeeded</enum>
+          </property>
+          <property name="horizontalScrollBarPolicy">
+           <enum>Qt::ScrollBarAlwaysOff</enum>
+          </property>
+          <property name="html">
+           <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:15pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="Line" name="line_5">
+        <property name="styleSheet">
+         <string notr="true">border-top: 1px solid yellow; 
+background-color: green; </string>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_3">
+        <property name="spacing">
+         <number>5</number>
+        </property>
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_2">
+          <property name="spacing">
+           <number>0</number>
+          </property>
+          <property name="sizeConstraint">
+           <enum>QLayout::SetFixedSize</enum>
+          </property>
+          <item>
+           <widget class="QPushButton" name="pushButton_hex">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>50</width>
+              <height>15</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>50</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string>HEX</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButton_dec">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>50</width>
+              <height>15</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>50</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string>DEC</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButton_otc">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>50</width>
+              <height>15</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>50</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string>OTC</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButton_bin">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>50</width>
+              <height>15</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>50</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string>BIN</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="Line" name="line_7">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout">
+          <property name="spacing">
+           <number>1</number>
+          </property>
+          <property name="sizeConstraint">
+           <enum>QLayout::SetMaximumSize</enum>
+          </property>
+          <item>
+           <widget class="QLabel" name="label_hex">
+            <property name="acceptDrops">
+             <bool>false</bool>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(78, 78, 78);</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="scaledContents">
+             <bool>true</bool>
+            </property>
+            <property name="wordWrap">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_dec">
+            <property name="acceptDrops">
+             <bool>false</bool>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(78, 78, 78);</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="scaledContents">
+             <bool>true</bool>
+            </property>
+            <property name="wordWrap">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_otc">
+            <property name="acceptDrops">
+             <bool>false</bool>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(78, 78, 78);</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="scaledContents">
+             <bool>true</bool>
+            </property>
+            <property name="wordWrap">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_bin">
+            <property name="acceptDrops">
+             <bool>false</bool>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(78, 78, 78);</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="scaledContents">
+             <bool>true</bool>
+            </property>
+            <property name="wordWrap">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="Line" name="line_6">
+        <property name="styleSheet">
+         <string notr="true">border-top: 1px solid yellow; 
+background-color: green; </string>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="baseSetColumn">
+        <property name="sizeConstraint">
+         <enum>QLayout::SetFixedSize</enum>
+        </property>
+        <item>
+         <widget class="QGroupBox" name="groupBox">
+          <property name="title">
+           <string/>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout">
+           <item>
+            <widget class="QRadioButton" name="radioButton">
+             <property name="text">
+              <string>十六进制</string>
+             </property>
+             <property name="checked">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QRadioButton" name="radioButton_3">
+             <property name="text">
+              <string>十进制</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QRadioButton" name="radioButton_4">
+             <property name="text">
+              <string>八进制</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QRadioButton" name="radioButton_8">
+             <property name="maximumSize">
+              <size>
+               <width>150</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>二进制</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="Line" name="line_3">
+          <property name="styleSheet">
+           <string notr="true">background-color: yellow;</string>
+          </property>
+          <property name="lineWidth">
+           <number>2</number>
+          </property>
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="groupBox_2">
+          <property name="maximumSize">
+           <size>
+            <width>350</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="title">
+           <string/>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout_2">
+           <item>
+            <widget class="QRadioButton" name="radioButton_5">
+             <property name="minimumSize">
+              <size>
+               <width>100</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>角度制</string>
+             </property>
+             <property name="checked">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QRadioButton" name="radioButton_7">
+             <property name="minimumSize">
+              <size>
+               <width>100</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>弧度制</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="Line" name="line_4">
+        <property name="styleSheet">
+         <string notr="true">border-top: 1px solid red; 
+background-color: green; </string>
+        </property>
+        <property name="lineWidth">
+         <number>2</number>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <layout class="QGridLayout" name="gridLayout_2">
+        <item row="1" column="8">
+         <widget class="QPushButton" name="pushButton_clearAll">
+          <property name="styleSheet">
+           <string notr="true">QPushButton
+{
+color: #b1b1b1;
+    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #2D51DA, stop: 0.1 #2D51DA, stop: 0.5 #2D51DA, stop: 0.9 #2D51DA, stop: 1 #2D51DA);
+    border-width: 2px;
+    border-color: #1e1e50;
+    border-style: solid;
+    border-radius: 8;
+    padding: 1px;
+    font-size: 16px;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+QPushButton:pressed
+{
+    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #2d2d2d, stop: 0.1 #2b2b2b, stop: 0.5 #292929, stop: 0.9 #282828, stop: 1 #252525);
+}</string>
+          </property>
+          <property name="text">
+           <string>全清</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="5">
+         <widget class="QPushButton" name="pushButton_5">
+          <property name="styleSheet">
+           <string notr="true">QPushButton
+{
+color: #b1b1b1;
+    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #2D51DA, stop: 0.1 #2D51DA, stop: 0.5 #2D51DA, stop: 0.9 #2D51DA, stop: 1 #2D51DA);
+    border-width: 2px;
+    border-color: #1e1e50;
+    border-style: solid;
+    border-radius: 8;
+    padding: 1px;
+    font-size: 16px;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+QPushButton:pressed
+{
+    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #2d2d2d, stop: 0.1 #2b2b2b, stop: 0.5 #292929, stop: 0.9 #282828, stop: 1 #252525);
+}</string>
+          </property>
+          <property name="text">
+           <string>累存</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="3">
+         <widget class="QPushButton" name="pushButton_7">
+          <property name="styleSheet">
+           <string notr="true">QPushButton
+{
+color: #b1b1b1;
+    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #2D51DA, stop: 0.1 #2D51DA, stop: 0.5 #2D51DA, stop: 0.9 #2D51DA, stop: 1 #2D51DA);
+    border-width: 2px;
+    border-color: #1e1e50;
+    border-style: solid;
+    border-radius: 8;
+    padding: 1px;
+    font-size: 16px;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+QPushButton:pressed
+{
+    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #2d2d2d, stop: 0.1 #2b2b2b, stop: 0.5 #292929, stop: 0.9 #282828, stop: 1 #252525);
+}</string>
+          </property>
+          <property name="text">
+           <string>存储</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="2">
+         <widget class="QPushButton" name="pushButton_6">
+          <property name="styleSheet">
+           <string notr="true">QPushButton
+{
+color: #b1b1b1;
+    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #2D51DA, stop: 0.1 #2D51DA, stop: 0.5 #2D51DA, stop: 0.9 #2D51DA, stop: 1 #2D51DA);
+    border-width: 2px;
+    border-color: #1e1e50;
+    border-style: solid;
+    border-radius: 8;
+    padding: 1px;
+    font-size: 16px;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+QPushButton:pressed
+{
+    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #2d2d2d, stop: 0.1 #2b2b2b, stop: 0.5 #292929, stop: 0.9 #282828, stop: 1 #252525);
+}</string>
+          </property>
+          <property name="text">
+           <string>设置</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="7">
+         <widget class="QPushButton" name="pushButton_clearRam">
+          <property name="styleSheet">
+           <string notr="true">QPushButton
+{
+color: #b1b1b1;
+    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #2D51DA, stop: 0.1 #2D51DA, stop: 0.5 #2D51DA, stop: 0.9 #2D51DA, stop: 1 #2D51DA);
+    border-width: 2px;
+    border-color: #1e1e50;
+    border-style: solid;
+    border-radius: 8;
+    padding: 1px;
+    font-size: 16px;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+QPushButton:pressed
+{
+    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #2d2d2d, stop: 0.1 #2b2b2b, stop: 0.5 #292929, stop: 0.9 #282828, stop: 1 #252525);
+}</string>
+          </property>
+          <property name="text">
+           <string>清存</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="4">
+         <widget class="QPushButton" name="pushButton_8">
+          <property name="styleSheet">
+           <string notr="true">QPushButton
+{
+color: #b1b1b1;
+    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #2D51DA, stop: 0.1 #2D51DA, stop: 0.5 #2D51DA, stop: 0.9 #2D51DA, stop: 1 #2D51DA);
+    border-width: 2px;
+    border-color: #1e1e50;
+    border-style: solid;
+    border-radius: 8;
+    padding: 1px;
+    font-size: 16px;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+QPushButton:pressed
+{
+    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #2d2d2d, stop: 0.1 #2b2b2b, stop: 0.5 #292929, stop: 0.9 #282828, stop: 1 #252525);
+}</string>
+          </property>
+          <property name="text">
+           <string>取存</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="6">
+         <widget class="QPushButton" name="pushButton_9">
+          <property name="styleSheet">
+           <string notr="true">QPushButton
+{
+color: #b1b1b1;
+    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #2D51DA, stop: 0.1 #2D51DA, stop: 0.5 #2D51DA, stop: 0.9 #2D51DA, stop: 1 #2D51DA);
+    border-width: 2px;
+    border-color: #1e1e50;
+    border-style: solid;
+    border-radius: 8;
+    padding: 1px;
+    font-size: 16px;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+QPushButton:pressed
+{
+    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #2d2d2d, stop: 0.1 #2b2b2b, stop: 0.5 #292929, stop: 0.9 #282828, stop: 1 #252525);
+}</string>
+          </property>
+          <property name="text">
+           <string>积存</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="2">
+         <widget class="QCheckBox" name="checkBox_shift">
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <property name="text">
+           <string>上档功能</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="3">
+         <widget class="QCheckBox" name="checkBox_sqhs">
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <property name="text">
+           <string>双曲函数</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="8">
+         <widget class="QPushButton" name="pushButton_clearwindow">
+          <property name="styleSheet">
+           <string notr="true">QPushButton
+{
+color: #b1b1b1;
+    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #09470A, stop: 0.1 #09470A, stop: 0.5 #09470A, stop: 0.9 #09470A, stop: 1 #09470A);
+    border-width: 4px;
+    border-color: #1e1e1e;
+    border-style: solid;
+    border-radius: 8;
+    padding: 1px;
+    font-size: 15px;
+    padding-left: 1px;
+    padding-right: 1px;
+}
+
+QPushButton:pressed
+{
+    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #2d2d2d, stop: 0.1 #2b2b2b, stop: 0.5 #292929, stop: 0.9 #282828, stop: 1 #252525);
+}</string>
+          </property>
+          <property name="text">
+           <string>清屏</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="7">
+         <widget class="QPushButton" name="pushButton_delete">
+          <property name="styleSheet">
+           <string notr="true">QPushButton
+{
+color: #b1b1b1;
+    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #09470A, stop: 0.1 #09470A, stop: 0.5 #09470A, stop: 0.9 #09470A, stop: 1 #09470A);
+    border-width: 4px;
+    border-color: #1e1e1e;
+    border-style: solid;
+    border-radius: 8;
+    padding: 1px;
+    font-size: 15px;
+    padding-left: 1px;
+    padding-right: 1px;
+}
+
+QPushButton:pressed
+{
+    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #2d2d2d, stop: 0.1 #2b2b2b, stop: 0.5 #292929, stop: 0.9 #282828, stop: 1 #252525);
+}</string>
+          </property>
+          <property name="text">
+           <string>退格</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="4">
+         <widget class="QLabel" name="label_null_1">
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(34, 10, 10);</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="5">
+         <widget class="QLabel" name="label_null_2">
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(22, 6, 6);</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="6">
+         <widget class="QLabel" name="label_null_3">
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(22, 6, 6);</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="Line" name="line">
+        <property name="styleSheet">
+         <string notr="true">border-top: 1px solid yellow; 
+background-color: green; </string>
+        </property>
+        <property name="lineWidth">
+         <number>2</number>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="verticalSpacer">
+        <property name="styleSheet">
+         <string>QPushButton
+{
+    color:red; /*文字颜色*/
+    background-color:rgb(10, 78, 11);/*背景色*/
+    border-style:outset; /*边框风格*/
+    border-width:2px;/*边框宽度*/
+    border-color:rgb(10, 46,112); /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+    font:bold 14px; /*字体*/
+    font-family: Segoe UI;
+    min-width:50px;/*控件最小宽度*/
+    min-height:15px;/*控件最小高度*/
+    padding:4px;/*内边距*/
+}
+
+QPushButton:pressed
+{
+    color:#00ff00;
+    background-color:rgb(40, 85, 20); /*改变背景色*/
+    border-style:inset;/*改变边框风格*/
+    padding-left:6px;
+    padding-top:6px;
+}
+
+/*鼠标悬浮时的效果*/
+QPushButton:hover
+{
+    color:#0000ff;
+    background-color:rgb(40, 85, 20); /*改变背景色*/
+    border-style:inset;/*改变边框风格*/
+    padding-left:8px;
+    padding-top:8px;
+}
+
+ 
+/*鼠标不可用时的效果*/
+QPushButton:disabled
+{
+    color:#000000;
+    background-color:rgb(40, 85, 20); /*改变背景色*/
+    border-style:inset;/*改变边框风格*/
+    padding-left:6px;
+    padding-top:6px;
+}
+
+QPushButton:normal/*鼠标正常时的效果*/
+{
+    color:#000000;
+    background-color:rgb(40, 85, 20); /*改变背景色*/
+    border-style:inset;/*改变边框风格*/
+    padding-left:4px;
+    padding-top:4px;
+}</string>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>20</width>
+          <height>10</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <layout class="QGridLayout" name="baseFuncArea">
+        <item row="4" column="4">
+         <widget class="QPushButton" name="pushButton_E">
+          <property name="text">
+           <string>E</string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="3">
+         <widget class="QPushButton" name="pushButton_D">
+          <property name="text">
+           <string>D</string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="2">
+         <widget class="QPushButton" name="pushButton_C">
+          <property name="text">
+           <string>C</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="0">
+         <widget class="QPushButton" name="pushButton_number_0">
+          <property name="text">
+           <string>0</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="0">
+         <widget class="QPushButton" name="pushButton_number_7">
+          <property name="text">
+           <string>7</string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="0">
+         <widget class="QPushButton" name="pushButton_A">
+          <property name="text">
+           <string>A</string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="1">
+         <widget class="QPushButton" name="pushButton_B">
+          <property name="text">
+           <string>B</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="5">
+         <widget class="QPushButton" name="pushButton_or">
+          <property name="styleSheet">
+           <string notr="true">QPushButton
+{
+color: #b1b1b1;
+    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #2D51DA, stop: 0.1 #2D51DA, stop: 0.5 #2D51DA, stop: 0.9 #2D51DA, stop: 1 #2D51DA);
+    border-width: 2px;
+    border-color: #1e1e50;
+    border-style: solid;
+    border-radius: 8;
+    padding: 1px;
+    font-size: 16px;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+QPushButton:pressed
+{
+    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #2d2d2d, stop: 0.1 #2b2b2b, stop: 0.5 #292929, stop: 0.9 #282828, stop: 1 #252525);
+}</string>
+          </property>
+          <property name="text">
+           <string>或|</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0">
+         <widget class="QPushButton" name="pushButton_number_1">
+          <property name="text">
+           <string>1</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QPushButton" name="pushButton_number_4">
+          <property name="text">
+           <string>4</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="3">
+         <widget class="QPushButton" name="pushButton_div">
+          <property name="text">
+           <string>÷</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="5">
+         <widget class="QPushButton" name="pushButton_nor">
+          <property name="styleSheet">
+           <string notr="true">QPushButton
+{
+color: #b1b1b1;
+    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #2D51DA, stop: 0.1 #2D51DA, stop: 0.5 #2D51DA, stop: 0.9 #2D51DA, stop: 1 #2D51DA);
+    border-width: 2px;
+    border-color: #1e1e50;
+    border-style: solid;
+    border-radius: 8;
+    padding: 1px;
+    font-size: 16px;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+QPushButton:pressed
+{
+    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #2d2d2d, stop: 0.1 #2b2b2b, stop: 0.5 #292929, stop: 0.9 #282828, stop: 1 #252525);
+}</string>
+          </property>
+          <property name="text">
+           <string>非～</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="2">
+         <widget class="QPushButton" name="pushButton_piont">
+          <property name="text">
+           <string>.</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="3">
+         <widget class="QPushButton" name="pushButton_multi">
+          <property name="text">
+           <string>×</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="2">
+         <widget class="QPushButton" name="pushButton_number_6">
+          <property name="text">
+           <string>6</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="4">
+         <widget class="QPushButton" name="pushButton_integer">
+          <property name="styleSheet">
+           <string notr="true">QPushButton
+{
+color: #b1b1b1;
+    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #2D51DA, stop: 0.1 #2D51DA, stop: 0.5 #2D51DA, stop: 0.9 #2D51DA, stop: 1 #2D51DA);
+    border-width: 2px;
+    border-color: #1e1e50;
+    border-style: solid;
+    border-radius: 8;
+    padding: 1px;
+    font-size: 16px;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+QPushButton:pressed
+{
+    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #2d2d2d, stop: 0.1 #2b2b2b, stop: 0.5 #292929, stop: 0.9 #282828, stop: 1 #252525);
+}</string>
+          </property>
+          <property name="text">
+           <string>取整/</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="2">
+         <widget class="QPushButton" name="pushButton_number_9">
+          <property name="text">
+           <string>9</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="3">
+         <widget class="QPushButton" name="pushButton_sub">
+          <property name="text">
+           <string>-</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="4">
+         <widget class="QPushButton" name="pushButton_leftmove">
+          <property name="styleSheet">
+           <string notr="true">QPushButton
+{
+color: #b1b1b1;
+    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #2D51DA, stop: 0.1 #2D51DA, stop: 0.5 #2D51DA, stop: 0.9 #2D51DA, stop: 1 #2D51DA);
+    border-width: 2px;
+    border-color: #1e1e50;
+    border-style: solid;
+    border-radius: 8;
+    padding: 1px;
+    font-size: 16px;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+QPushButton:pressed
+{
+    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #2d2d2d, stop: 0.1 #2b2b2b, stop: 0.5 #292929, stop: 0.9 #282828, stop: 1 #252525);
+}</string>
+          </property>
+          <property name="text">
+           <string>左移</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="2">
+         <widget class="QPushButton" name="pushButton_number_3">
+          <property name="text">
+           <string>3</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="4">
+         <widget class="QPushButton" name="pushButton_equ">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton
+{
+color: #b1b1b1;
+    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #EB9214, stop: 0.1 #EB9214, stop: 0.5 #EB9214, stop: 0.9 #EB9214, stop: 1 #EB9214);
+    border-width: 2px;
+    border-color: #1e1e50;
+    border-style: solid;
+    border-radius: 8;
+    padding: 1px;
+    font-size: 25px;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+QPushButton:pressed
+{
+    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #2d2d2d, stop: 0.1 #2b2b2b, stop: 0.5 #292929, stop: 0.9 #282828, stop: 1 #252525);
+}</string>
+          </property>
+          <property name="text">
+           <string>=</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="5">
+         <widget class="QPushButton" name="pushButton_yiro">
+          <property name="styleSheet">
+           <string notr="true">QPushButton
+{
+color: #b1b1b1;
+    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #2D51DA, stop: 0.1 #2D51DA, stop: 0.5 #2D51DA, stop: 0.9 #2D51DA, stop: 1 #2D51DA);
+    border-width: 2px;
+    border-color: #1e1e50;
+    border-style: solid;
+    border-radius: 8;
+    padding: 1px;
+    font-size: 16px;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+QPushButton:pressed
+{
+    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #2d2d2d, stop: 0.1 #2b2b2b, stop: 0.5 #292929, stop: 0.9 #282828, stop: 1 #252525);
+}</string>
+          </property>
+          <property name="text">
+           <string>异或^</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="3">
+         <widget class="QPushButton" name="pushButton_add">
+          <property name="text">
+           <string>+</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="4">
+         <widget class="QPushButton" name="pushButton_leaveV">
+          <property name="styleSheet">
+           <string notr="true">QPushButton
+{
+color: #b1b1b1;
+    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #2D51DA, stop: 0.1 #2D51DA, stop: 0.5 #2D51DA, stop: 0.9 #2D51DA, stop: 1 #2D51DA);
+    border-width: 2px;
+    border-color: #1e1e50;
+    border-style: solid;
+    border-radius: 8;
+    padding: 1px;
+    font-size: 16px;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+QPushButton:pressed
+{
+    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #2d2d2d, stop: 0.1 #2b2b2b, stop: 0.5 #292929, stop: 0.9 #282828, stop: 1 #252525);
+}</string>
+          </property>
+          <property name="text">
+           <string>取余%</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QPushButton" name="pushButton_number_8">
+          <property name="text">
+           <string>8</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="5">
+         <widget class="QPushButton" name="pushButton_and">
+          <property name="styleSheet">
+           <string notr="true">QPushButton
+{
+color: #b1b1b1;
+    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #2D51DA, stop: 0.1 #2D51DA, stop: 0.5 #2D51DA, stop: 0.9 #2D51DA, stop: 1 #2D51DA);
+    border-width: 2px;
+    border-color: #1e1e50;
+    border-style: solid;
+    border-radius: 8;
+    padding: 1px;
+    font-size: 16px;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+QPushButton:pressed
+{
+    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #2d2d2d, stop: 0.1 #2b2b2b, stop: 0.5 #292929, stop: 0.9 #282828, stop: 1 #252525);
+}</string>
+          </property>
+          <property name="text">
+           <string>与&amp;</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1">
+         <widget class="QPushButton" name="pushButton_number_2">
+          <property name="text">
+           <string>2</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QPushButton" name="pushButton_number_5">
+          <property name="text">
+           <string>5</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="1">
+         <widget class="QPushButton" name="pushButton_symbol">
+          <property name="text">
+           <string>+/-</string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="5">
+         <widget class="QPushButton" name="pushButton_F">
+          <property name="text">
+           <string>F</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <spacer name="verticalSpacer_2">
+        <property name="styleSheet">
+         <string>QPushButton
+{
+    color:red; /*文字颜色*/
+    background-color:rgb(10, 78, 11);/*背景色*/
+    border-style:outset; /*边框风格*/
+    border-width:2px;/*边框宽度*/
+    border-color:rgb(10, 46,112); /*边框颜色*/
+    border-radius:10px; /*边框倒角*/
+    font:bold 14px; /*字体*/
+    font-family: Segoe UI;
+    min-width:50px;/*控件最小宽度*/
+    min-height:15px;/*控件最小高度*/
+    padding:4px;/*内边距*/
+}
+
+QPushButton:pressed
+{
+    color:#00ff00;
+    background-color:rgb(40, 85, 20); /*改变背景色*/
+    border-style:inset;/*改变边框风格*/
+    padding-left:6px;
+    padding-top:6px;
+}
+
+/*鼠标悬浮时的效果*/
+QPushButton:hover
+{
+    color:#0000ff;
+    background-color:rgb(40, 85, 20); /*改变背景色*/
+    border-style:inset;/*改变边框风格*/
+    padding-left:8px;
+    padding-top:8px;
+}
+
+ 
+/*鼠标不可用时的效果*/
+QPushButton:disabled
+{
+    color:#000000;
+    background-color:rgb(40, 85, 20); /*改变背景色*/
+    border-style:inset;/*改变边框风格*/
+    padding-left:6px;
+    padding-top:6px;
+}
+
+QPushButton:normal/*鼠标正常时的效果*/
+{
+    color:#000000;
+    background-color:rgb(40, 85, 20); /*改变背景色*/
+    border-style:inset;/*改变边框风格*/
+    padding-left:4px;
+    padding-top:4px;
+}</string>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>20</width>
+          <height>10</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="Line" name="line_2">
+        <property name="styleSheet">
+         <string notr="true">border-top: 1px solid yellow; 
+background-color: green; </string>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <layout class="QGridLayout" name="advFuncArea">
+        <item row="1" column="2">
+         <widget class="QPushButton" name="pushButton_DMS">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton
+{
+color: #b1b1b1;
+    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #2D51DA, stop: 0.1 #2D51DA, stop: 0.5 #2D51DA, stop: 0.9 #2D51DA, stop: 1 #2D51DA);
+    border-width: 2px;
+    border-color: #1e1e50;
+    border-style: solid;
+    border-radius: 8;
+    padding: 1px;
+    font-size: 16px;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+QPushButton:pressed
+{
+    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #2d2d2d, stop: 0.1 #2b2b2b, stop: 0.5 #292929, stop: 0.9 #282828, stop: 1 #252525);
+}
+
+QPushButton:!enabled{
+background-color: rgb(100, 100, 100);
+border-style: inset;
+}</string>
+          </property>
+          <property name="text">
+           <string>d.ms</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QPushButton" name="pushButton_ER">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton
+{
+color: #b1b1b1;
+    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #2D51DA, stop: 0.1 #2D51DA, stop: 0.5 #2D51DA, stop: 0.9 #2D51DA, stop: 1 #2D51DA);
+    border-width: 2px;
+    border-color: #1e1e50;
+    border-style: solid;
+    border-radius: 8;
+    padding: 1px;
+    font-size: 16px;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+QPushButton:pressed
+{
+    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #2d2d2d, stop: 0.1 #2b2b2b, stop: 0.5 #292929, stop: 0.9 #282828, stop: 1 #252525);
+}
+
+QPushButton:!enabled{
+background-color: rgb(100, 100, 100);
+border-style: inset;
+}</string>
+          </property>
+          <property name="text">
+           <string>E</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="4">
+         <widget class="QPushButton" name="pushButton">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton
+{
+color: #b1b1b1;
+    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #2D51DA, stop: 0.1 #2D51DA, stop: 0.5 #2D51DA, stop: 0.9 #2D51DA, stop: 1 #2D51DA);
+    border-width: 2px;
+    border-color: #1e1e50;
+    border-style: solid;
+    border-radius: 8;
+    padding: 1px;
+    font-size: 16px;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+QPushButton:pressed
+{
+    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #2d2d2d, stop: 0.1 #2b2b2b, stop: 0.5 #292929, stop: 0.9 #282828, stop: 1 #252525);
+}</string>
+          </property>
+          <property name="text">
+           <string>x^y</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="4">
+         <widget class="QPushButton" name="pushButton_35">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton
+{
+color: #b1b1b1;
+    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #2D51DA, stop: 0.1 #2D51DA, stop: 0.5 #2D51DA, stop: 0.9 #2D51DA, stop: 1 #2D51DA);
+    border-width: 2px;
+    border-color: #1e1e50;
+    border-style: solid;
+    border-radius: 8;
+    padding: 1px;
+    font-size: 16px;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+QPushButton:pressed
+{
+    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #2d2d2d, stop: 0.1 #2b2b2b, stop: 0.5 #292929, stop: 0.9 #282828, stop: 1 #252525);
+}</string>
+          </property>
+          <property name="text">
+           <string>)</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="4">
+         <widget class="QPushButton" name="pushButton_TAN">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton
+{
+color: #b1b1b1;
+    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #2D51DA, stop: 0.1 #2D51DA, stop: 0.5 #2D51DA, stop: 0.9 #2D51DA, stop: 1 #2D51DA);
+    border-width: 2px;
+    border-color: #1e1e50;
+    border-style: solid;
+    border-radius: 8;
+    padding: 1px;
+    font-size: 16px;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+QPushButton:pressed
+{
+    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #2d2d2d, stop: 0.1 #2b2b2b, stop: 0.5 #292929, stop: 0.9 #282828, stop: 1 #252525);
+}
+
+QPushButton:!enabled{
+background-color: rgb(100, 100, 100);
+border-style: inset;
+}</string>
+          </property>
+          <property name="text">
+           <string>tan</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QPushButton" name="pushButton_PI">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton
+{
+color: #b1b1b1;
+    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #2D51DA, stop: 0.1 #2D51DA, stop: 0.5 #2D51DA, stop: 0.9 #2D51DA, stop: 1 #2D51DA);
+    border-width: 2px;
+    border-color: #1e1e50;
+    border-style: solid;
+    border-radius: 8;
+    padding: 1px;
+    font-size: 16px;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+QPushButton:pressed
+{
+    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #2d2d2d, stop: 0.1 #2b2b2b, stop: 0.5 #292929, stop: 0.9 #282828, stop: 1 #252525);
+}
+
+QPushButton:!enabled{
+background-color: rgb(100, 100, 100);
+border-style: inset;
+}</string>
+          </property>
+          <property name="text">
+           <string>PI</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="3">
+         <widget class="QPushButton" name="pushButton_37">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton
+{
+color: #b1b1b1;
+    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #2D51DA, stop: 0.1 #2D51DA, stop: 0.5 #2D51DA, stop: 0.9 #2D51DA, stop: 1 #2D51DA);
+    border-width: 2px;
+    border-color: #1e1e50;
+    border-style: solid;
+    border-radius: 8;
+    padding: 1px;
+    font-size: 16px;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+QPushButton:pressed
+{
+    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #2d2d2d, stop: 0.1 #2b2b2b, stop: 0.5 #292929, stop: 0.9 #282828, stop: 1 #252525);
+}</string>
+          </property>
+          <property name="text">
+           <string>(</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0">
+         <widget class="QPushButton" name="pushButton_41">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton
+{
+color: #b1b1b1;
+    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #2D51DA, stop: 0.1 #2D51DA, stop: 0.5 #2D51DA, stop: 0.9 #2D51DA, stop: 1 #2D51DA);
+    border-width: 2px;
+    border-color: #1e1e50;
+    border-style: solid;
+    border-radius: 8;
+    padding: 1px;
+    font-size: 16px;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+QPushButton:pressed
+{
+    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #2d2d2d, stop: 0.1 #2b2b2b, stop: 0.5 #292929, stop: 0.9 #282828, stop: 1 #252525);
+}</string>
+          </property>
+          <property name="text">
+           <string>ln</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1">
+         <widget class="QPushButton" name="pushButton_42">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton
+{
+color: #b1b1b1;
+    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #2D51DA, stop: 0.1 #2D51DA, stop: 0.5 #2D51DA, stop: 0.9 #2D51DA, stop: 1 #2D51DA);
+    border-width: 2px;
+    border-color: #1e1e50;
+    border-style: solid;
+    border-radius: 8;
+    padding: 1px;
+    font-size: 16px;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+QPushButton:pressed
+{
+    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #2d2d2d, stop: 0.1 #2b2b2b, stop: 0.5 #292929, stop: 0.9 #282828, stop: 1 #252525);
+}</string>
+          </property>
+          <property name="text">
+           <string>log</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="2">
+         <widget class="QPushButton" name="pushButton_SIN">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton
+{
+color: #b1b1b1;
+    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #2D51DA, stop: 0.1 #2D51DA, stop: 0.5 #2D51DA, stop: 0.9 #2D51DA, stop: 1 #2D51DA);
+    border-width: 2px;
+    border-color: #1e1e50;
+    border-style: solid;
+    border-radius: 8;
+    padding: 1px;
+    font-size: 16px;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+QPushButton:pressed
+{
+    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #2d2d2d, stop: 0.1 #2b2b2b, stop: 0.5 #292929, stop: 0.9 #282828, stop: 1 #252525);
+}
+
+QPushButton:!enabled{
+background-color: rgb(100, 100, 100);
+border-style: inset;
+}</string>
+          </property>
+          <property name="text">
+           <string>sin</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="3">
+         <widget class="QPushButton" name="pushButton_COS">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton
+{
+color: #b1b1b1;
+    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #2D51DA, stop: 0.1 #2D51DA, stop: 0.5 #2D51DA, stop: 0.9 #2D51DA, stop: 1 #2D51DA);
+    border-width: 2px;
+    border-color: #1e1e50;
+    border-style: solid;
+    border-radius: 8;
+    padding: 1px;
+    font-size: 16px;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+QPushButton:pressed
+{
+    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #2d2d2d, stop: 0.1 #2b2b2b, stop: 0.5 #292929, stop: 0.9 #282828, stop: 1 #252525);
+}
+
+QPushButton:!enabled{
+background-color: rgb(100, 100, 100);
+border-style: inset;
+}</string>
+          </property>
+          <property name="text">
+           <string>cos</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="0">
+         <widget class="QPushButton" name="pushButton_45">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton
+{
+color: #b1b1b1;
+    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #2D51DA, stop: 0.1 #2D51DA, stop: 0.5 #2D51DA, stop: 0.9 #2D51DA, stop: 1 #2D51DA);
+    border-width: 2px;
+    border-color: #1e1e50;
+    border-style: solid;
+    border-radius: 8;
+    padding: 1px;
+    font-size: 16px;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+QPushButton:pressed
+{
+    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #2d2d2d, stop: 0.1 #2b2b2b, stop: 0.5 #292929, stop: 0.9 #282828, stop: 1 #252525);
+}</string>
+          </property>
+          <property name="text">
+           <string>n!</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="1">
+         <widget class="QPushButton" name="pushButton_46">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton
+{
+color: #b1b1b1;
+    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #2D51DA, stop: 0.1 #2D51DA, stop: 0.5 #2D51DA, stop: 0.9 #2D51DA, stop: 1 #2D51DA);
+    border-width: 2px;
+    border-color: #1e1e50;
+    border-style: solid;
+    border-radius: 8;
+    padding: 1px;
+    font-size: 16px;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+QPushButton:pressed
+{
+    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #2d2d2d, stop: 0.1 #2b2b2b, stop: 0.5 #292929, stop: 0.9 #282828, stop: 1 #252525);
+}</string>
+          </property>
+          <property name="text">
+           <string>1/x</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="2">
+         <widget class="QPushButton" name="pushButton_47">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton
+{
+color: #b1b1b1;
+    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #2D51DA, stop: 0.1 #2D51DA, stop: 0.5 #2D51DA, stop: 0.9 #2D51DA, stop: 1 #2D51DA);
+    border-width: 2px;
+    border-color: #1e1e50;
+    border-style: solid;
+    border-radius: 8;
+    padding: 1px;
+    font-size: 16px;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+QPushButton:pressed
+{
+    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #2d2d2d, stop: 0.1 #2b2b2b, stop: 0.5 #292929, stop: 0.9 #282828, stop: 1 #252525);
+}</string>
+          </property>
+          <property name="text">
+           <string>x^2</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="3">
+         <widget class="QPushButton" name="pushButton_48">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton
+{
+color: #b1b1b1;
+    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #2D51DA, stop: 0.1 #2D51DA, stop: 0.5 #2D51DA, stop: 0.9 #2D51DA, stop: 1 #2D51DA);
+    border-width: 2px;
+    border-color: #1e1e50;
+    border-style: solid;
+    border-radius: 8;
+    padding: 1px;
+    font-size: 16px;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+QPushButton:pressed
+{
+    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #2d2d2d, stop: 0.1 #2b2b2b, stop: 0.5 #292929, stop: 0.9 #282828, stop: 1 #252525);
+}</string>
+          </property>
+          <property name="text">
+           <string>x^3</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>pushButton_number_7</sender>
+   <signal>clicked()</signal>
+   <receiver>calMain</receiver>
+   <slot>slotDigtalNumber()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>110</x>
+     <y>400</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>5</x>
+     <y>226</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_delete</sender>
+   <signal>clicked()</signal>
+   <receiver>calMain</receiver>
+   <slot>slotFuncButton()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>553</x>
+     <y>311</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>483</x>
+     <y>138</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_clearwindow</sender>
+   <signal>clicked()</signal>
+   <receiver>calMain</receiver>
+   <slot>slotFuncButton()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>642</x>
+     <y>311</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>555</x>
+     <y>119</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_number_8</sender>
+   <signal>clicked()</signal>
+   <receiver>calMain</receiver>
+   <slot>slotDigtalNumber()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>217</x>
+     <y>400</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>98</x>
+     <y>225</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_number_9</sender>
+   <signal>clicked()</signal>
+   <receiver>calMain</receiver>
+   <slot>slotDigtalNumber()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>323</x>
+     <y>400</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>190</x>
+     <y>226</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_number_4</sender>
+   <signal>clicked()</signal>
+   <receiver>calMain</receiver>
+   <slot>slotDigtalNumber()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>100</x>
+     <y>437</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>4</x>
+     <y>271</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_number_5</sender>
+   <signal>clicked()</signal>
+   <receiver>calMain</receiver>
+   <slot>slotDigtalNumber()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>217</x>
+     <y>437</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>99</x>
+     <y>271</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_number_6</sender>
+   <signal>clicked()</signal>
+   <receiver>calMain</receiver>
+   <slot>slotDigtalNumber()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>323</x>
+     <y>437</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>190</x>
+     <y>269</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_number_1</sender>
+   <signal>clicked()</signal>
+   <receiver>calMain</receiver>
+   <slot>slotDigtalNumber()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>110</x>
+     <y>474</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>2</x>
+     <y>307</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_number_2</sender>
+   <signal>clicked()</signal>
+   <receiver>calMain</receiver>
+   <slot>slotDigtalNumber()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>217</x>
+     <y>474</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>99</x>
+     <y>308</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_number_3</sender>
+   <signal>clicked()</signal>
+   <receiver>calMain</receiver>
+   <slot>slotDigtalNumber()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>323</x>
+     <y>474</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>190</x>
+     <y>308</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_number_0</sender>
+   <signal>clicked()</signal>
+   <receiver>calMain</receiver>
+   <slot>slotDigtalNumber()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>102</x>
+     <y>512</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>6</x>
+     <y>344</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_A</sender>
+   <signal>clicked()</signal>
+   <receiver>calMain</receiver>
+   <slot>slotDigtalNumber()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>110</x>
+     <y>549</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>5</x>
+     <y>382</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_B</sender>
+   <signal>clicked()</signal>
+   <receiver>calMain</receiver>
+   <slot>slotDigtalNumber()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>217</x>
+     <y>549</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>99</x>
+     <y>383</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_C</sender>
+   <signal>clicked()</signal>
+   <receiver>calMain</receiver>
+   <slot>slotDigtalNumber()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>323</x>
+     <y>549</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>192</x>
+     <y>383</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_D</sender>
+   <signal>clicked()</signal>
+   <receiver>calMain</receiver>
+   <slot>slotDigtalNumber()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>429</x>
+     <y>549</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>281</x>
+     <y>382</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_E</sender>
+   <signal>clicked()</signal>
+   <receiver>calMain</receiver>
+   <slot>slotDigtalNumber()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>536</x>
+     <y>549</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>372</x>
+     <y>384</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_F</sender>
+   <signal>clicked()</signal>
+   <receiver>calMain</receiver>
+   <slot>slotDigtalNumber()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>642</x>
+     <y>549</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>463</x>
+     <y>384</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>radioButton</sender>
+   <signal>clicked()</signal>
+   <receiver>calMain</receiver>
+   <slot>slotFuncButton()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>117</x>
+     <y>250</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>8</x>
+     <y>93</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>radioButton_5</sender>
+   <signal>clicked()</signal>
+   <receiver>calMain</receiver>
+   <slot>slotFuncButton()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>527</x>
+     <y>250</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>372</x>
+     <y>93</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>radioButton_3</sender>
+   <signal>clicked()</signal>
+   <receiver>calMain</receiver>
+   <slot>slotFuncButton()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>198</x>
+     <y>250</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>86</x>
+     <y>93</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>radioButton_4</sender>
+   <signal>clicked()</signal>
+   <receiver>calMain</receiver>
+   <slot>slotFuncButton()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>279</x>
+     <y>250</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>163</x>
+     <y>92</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>radioButton_8</sender>
+   <signal>clicked()</signal>
+   <receiver>calMain</receiver>
+   <slot>slotFuncButton()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>360</x>
+     <y>250</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>238</x>
+     <y>94</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>radioButton_7</sender>
+   <signal>clicked()</signal>
+   <receiver>calMain</receiver>
+   <slot>slotFuncButton()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>633</x>
+     <y>250</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>454</x>
+     <y>92</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_add</sender>
+   <signal>clicked()</signal>
+   <receiver>calMain</receiver>
+   <slot>slotFuncButton()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>429</x>
+     <y>512</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>573</x>
+     <y>583</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_sub</sender>
+   <signal>clicked()</signal>
+   <receiver>calMain</receiver>
+   <slot>slotFuncButton()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>429</x>
+     <y>474</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>577</x>
+     <y>523</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_multi</sender>
+   <signal>clicked()</signal>
+   <receiver>calMain</receiver>
+   <slot>slotFuncButton()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>429</x>
+     <y>437</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>576</x>
+     <y>465</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_div</sender>
+   <signal>clicked()</signal>
+   <receiver>calMain</receiver>
+   <slot>slotFuncButton()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>429</x>
+     <y>400</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>563</x>
+     <y>403</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_piont</sender>
+   <signal>clicked()</signal>
+   <receiver>calMain</receiver>
+   <slot>slotFuncButton()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>323</x>
+     <y>512</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>305</x>
+     <y>581</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_equ</sender>
+   <signal>clicked()</signal>
+   <receiver>calMain</receiver>
+   <slot>slotOperationsEqu()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>536</x>
+     <y>516</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>653</x>
+     <y>586</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_leftmove</sender>
+   <signal>clicked()</signal>
+   <receiver>calMain</receiver>
+   <slot>slotSigalOperation()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>491</x>
+     <y>454</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>387</x>
+     <y>441</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_nor</sender>
+   <signal>clicked()</signal>
+   <receiver>calMain</receiver>
+   <slot>slotSigalOperation()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>566</x>
+     <y>456</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>401</x>
+     <y>446</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>slotDigtalNumber()</slot>
+  <slot>slotFuncButton()</slot>
+  <slot>slotOperationsEqu()</slot>
+  <slot>slotSigalOperation()</slot>
+ </slots>
+</ui>

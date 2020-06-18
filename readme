@@ -1,2 +1,5 @@
-
-second test file
+QFile qssfile(":/style/style.qss");
+qssfile.open(QFile::ReadOnly);
+QString qss;
+qss = qssfile.readAll();
+this->setStyleSheet(qss);
